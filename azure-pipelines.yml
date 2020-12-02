@@ -46,7 +46,7 @@ steps:
   - task: DotNetCoreCLI@2
     displayName: "Publish the project - Release"
     inputs:
-      command: 'Publish'
+      command: 'publish'
       projects: '**/*.csproj'
       publishWebProjects: false
       arguments: "--no-restore --configuration Release"
@@ -55,4 +55,3 @@ steps:
   - task: PublishBuildArtifacts@1
     displayName: 'Publish Artifact:drop'
     condition: succeeded()
-     
